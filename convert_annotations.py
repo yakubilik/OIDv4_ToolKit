@@ -58,7 +58,7 @@ for DIR in DIRS:
                         with open(filename) as f:
                             for line in f:
                                 for class_type in classes:
-                                    line = line.replace(class_type, str(classes.get(class_type)))
+                                    line = line.replace(class_type, str(classes.get(class_type))+' ')
                                 labels = line.split()
                                 coords = np.asarray([float(labels[1]), float(labels[2]), float(labels[3]), float(labels[4])])
                                 coords = convert(filename_str, coords)
